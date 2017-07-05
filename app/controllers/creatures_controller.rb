@@ -9,10 +9,10 @@ class CreaturesController < ApplicationController
   end
 
   def create
-    puts "creature_params is: "
-    puts creature_params
-    @creature = Creature.create(creature_params)
-    redirect_to creatures_path
+    @creature = Creature.new(creature_params)
+    if @creature.save!
+      redirect_to creatures_path
+    end
   end
 
   private
