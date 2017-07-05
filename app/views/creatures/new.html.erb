@@ -1,0 +1,11 @@
+<%= form_for @creature do |f| %>
+  <div class="form_group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form_group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <%= f.submit "Add Creature", class: "btn btn-primary" %>
+<% end %>
