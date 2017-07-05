@@ -5,7 +5,7 @@
   <% @creatures.each do |creature| %>
     <div class="col-4">
       <%= link_to creature_path(creature.id), :action => 'go' do %>
-        <div class="card">
+        <div class="card each_creature">
           <div class="card-header"><%= creature.name %></div>
           <div class="card-block"><%= creature.description %></div>
         </div>
@@ -14,5 +14,6 @@
   <% end %>
 </div>
 
-<%= link_to "Add a Creature", new_creature_path, class: "btn btn-primary" %>
-
+<div class="text-center">
+  <%= link_to "Add a Creature", new_creature_path, class: "btn btn-primary" %>
+</div>

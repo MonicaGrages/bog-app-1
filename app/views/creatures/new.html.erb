@@ -1,13 +1,9 @@
-<%= form_for @creature do |f| %>
-  <div class="form_group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control" %>
-  </div>
-  <div class="form_group">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: "form-control" %>
-  </div>
-  <%= f.submit "Add Creature", class: "btn btn-primary" %>
-<% end %>
+<div class="jumbotron">
+  <h3 class="page-header text-center">Enter New Creature Details</h3>
+</div>
 
-<%= link_to "Back to Creatures", creatures_path, class: "btn btn-danger" %>
+<%= render 'form' %>
+
+<div class="text-center">
+  <%= link_to "Back to Creatures", creatures_path, class: "btn btn-danger" %>
+</div>

@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <h3 class="page-header text-center">Edit Creature Details</h3>
+</div>
+
+<%= render 'form' %>
+
+<div class="text-center">
+  <%= button_to "Nevermind", creature_path, method: "get", class: "btn" %>
+  <%= button_to "Delete #{@creature.name}", delete_creature_path, method: "delete", class: "btn btn-danger" %>
+</div>
