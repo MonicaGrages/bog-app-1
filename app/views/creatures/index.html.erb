@@ -2,13 +2,13 @@
 <div class="row">
   <% @creatures.each do |creature| %>
     <div class="col-4">
-      <p><%= creature.name %> - <small><%= creature.description %></small></p>
+      <div class="card">
+        <%= creature.name %> - <small><%= creature.description %></small>
+      </div>
     </div>
   <% end %>
 </div>
 
 
-<%= link_to "Add a Creature", new_creature_path %>
-<button type="button" class="btn btn-primary">Add a Creature</button>
-
+<%= link_to "Add a Creature", new_creature_path, class: "btn btn-primary" %>
 
