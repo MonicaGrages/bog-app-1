@@ -12,3 +12,8 @@ Put Rails knowledge into practice! In this exercise, I
 
 ### [See the app deployed to Heroku](https://bog-app-time-trials-1.herokuapp.com/creatures)
 
+### Goals for round 2
+
+- Use fewer hints
+- Decrease time to 2 hours
+- Incorporate a new Gem
