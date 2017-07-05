@@ -1,5 +1,12 @@
-<% @creatures.each do |creature| %>
-  <li>
-    <%= creature.name %> - <small><%= creature.description %></small>
-  </li>
-<% end %>
+<h1 class="row">Creatures in the Bog</h1>
+<div class="row">
+  <% @creatures.each do |creature| %>
+    <div class="col-4">
+      <p><%= creature.name %> - <small><%= creature.description %></small></p>
+    </div>
+  <% end %>
+</div>
+
+<button type="button" class="btn btn-primary">Add a Creature</button>
+
+
