@@ -1,14 +1,18 @@
-<h1 class="row">Creatures in the Bog</h1>
+<div class="jumbotron">
+  <h1 class="page-header text-center">Creatures in the Bog</h1>
+</div>
 <div class="row">
   <% @creatures.each do |creature| %>
     <div class="col-4">
-      <div class="card">
-        <%= creature.name %> - <small><%= creature.description %></small>
-      </div>
+      <%= link_to creature_path(creature.id), :action => 'go' do %>
+        <div class="card">
+          <div class="card-header"><%= creature.name %></div>
+          <div class="card-block"><%= creature.description %></div>
+        </div>
+      <% end %>
     </div>
   <% end %>
 </div>
-
 
 <%= link_to "Add a Creature", new_creature_path, class: "btn btn-primary" %>
 
